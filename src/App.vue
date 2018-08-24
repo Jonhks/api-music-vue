@@ -3,7 +3,7 @@
   img(src='./assets/logo.png')
   h1 Api Music
   ul
-    artist(v-for="artist in artists" v-bind:artist="artist")
+    artist(v-for="artist in artists" v-bind:artist="artist" v-bind:key="artist.mbid")
     
 </template>
 // 
