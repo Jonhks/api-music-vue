@@ -17,7 +17,7 @@ export default {
     margin 10 0px
 
   .img 
-    width 50%
+    width 30%
     border 3px black outset
 
 </style>
