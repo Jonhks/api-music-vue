@@ -2,10 +2,11 @@ import config from  './config'
 
 // const apiKey = config.apiKey
 const { apiKey } = config
-const url = `https://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=mexico&api_key=${apiKey}&format=json`
+const URL = `https://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=:country&api_key=${apiKey}&format=json`
 
-export default function getArtists() {
+export default function getArtists(country) {
+  const url = URL.replace(':country', country)
   return fetch(url)
     .then(res => res.json())
-    .then(res =>res.topartists.artist)
+    .then(res => res.topartists.artist)
 }
